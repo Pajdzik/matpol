@@ -1,64 +1,33 @@
-# Astro Starter Kit: Blog
+# Matpol
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/astro-blog-starter-template)
+Prosta, jednostronicowa strona firmy Matpol oferującej stacjonarne korepetycje z języka polskiego i matematyki w Szczecinie.
 
-![Astro Template Preview](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
-
-<!-- dash-content-start -->
-
-Create a blog with Astro and deploy it on Cloudflare Workers as a [static website](https://developers.cloudflare.com/workers/static-assets/).
-
-Features:
-
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-- ✅ Built-in Observability logging
-
-<!-- dash-content-end -->
-
-## Getting Started
-
-Outside of this repo, you can start a new project with this template using [C3](https://developers.cloudflare.com/pages/get-started/c3/) (the `create-cloudflare` CLI):
+## Uruchomienie lokalne
 
 ```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/astro-blog-starter-template
+npm install
+npm run dev
 ```
 
-A live public deployment of this template is available at [https://astro-blog-starter-template.templates.workers.dev](https://astro-blog-starter-template.templates.workers.dev)
+Strona będzie dostępna pod adresem `http://localhost:4321`.
 
-## 🚀 Project Structure
+## Konfiguracja treści
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Główną stronę edytuj w `src/pages/index.astro`. Przed publikacją uzupełnij tam dane kontaktowe oraz, jeśli są już ustalone, imiona nauczycieli. Numery telefonu są obecnie placeholderami tekstowymi; po otrzymaniu właściwych numerów dodaj do nich również linki `tel:`. W tym samym pliku możesz zmienić adres zajęć (domyślnie: Szczecin, ul. Korepetycyjna 5) i czas lekcji (domyślnie: 60 minut).
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Tytuł i opis SEO znajdują się w `src/consts.ts`. Domyślny obraz Open Graph to `public/matpol-logo.jpg`; zastąp go własnym plikiem, jeśli logo będzie miało inną nazwę.
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+## Budowanie i wdrażanie
 
-Any static assets, like images, can be placed in the `public/` directory.
+```bash
+npm run build
+npm run deploy
+```
 
-## 🧞 Commands
+Adres kanoniczny i absolutne adresy Open Graph są generowane tylko wtedy, gdy podczas budowania ustawiona jest zmienna `SITE_URL`, na przykład:
 
-All commands are run from the root of the project, from a terminal:
+```bash
+SITE_URL=https://matpol.example npm run build
+```
 
-| Command                           | Action                                           |
-| :-------------------------------- | :----------------------------------------------- |
-| `npm install`                     | Installs dependencies                            |
-| `npm run dev`                     | Starts local dev server at `localhost:4321`      |
-| `npm run build`                   | Build your production site to `./dist/`          |
-| `npm run preview`                 | Preview your build locally, before deploying     |
-| `npm run astro ...`               | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help`         | Get help using the Astro CLI                     |
-| `npm run build && npm run deploy` | Deploy your production site to Cloudflare        |
-| `npm wrangler tail`               | View real-time logs for all Workers              |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+Projekt korzysta z adaptera Cloudflare i może być wdrażany jako statyczna strona na Cloudflare Workers.

@@ -1,5 +1,3 @@
-// Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
-
-export const SITE_TITLE = "Astro Blog";
-export const SITE_DESCRIPTION = "Welcome to my website!";
+export const SITE_TITLE = "Matpol — korepetycje w Szczecinie";
+export const SITE_DESCRIPTION =
+	"Korepetycje z języka polskiego i matematyki w Szczecinie. Indywidualne lekcje stacjonarne, 60 minut, ul. Korepetycyjna 5.";

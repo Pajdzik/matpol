@@ -1,6 +1,6 @@
 {
 	"name": "matpol",
-	"description": "Build a personal website, blog, or portfolio with Astro.",
+	"description": "Jednostronicowa strona Matpol — korepetycje z języka polskiego i matematyki w Szczecinie.",
 	"cloudflare": {
 		"label": "Astro Framework Starter",
 		"products": [
