@@ -303,6 +303,21 @@ em {
   padding-bottom: 0.25rem;
   font-size: 14px;
 }
+.map-frame {
+  margin-top: 1.75rem;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  min-height: 150px;
+  border: 1px solid #526076;
+  background: #1b2b43;
+  overflow: hidden;
+}
+.map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 .site-footer {
   max-width: 1280px;
   margin: auto;
@@ -374,6 +389,9 @@ em {
   }
   .contact-details {
     padding-top: 3.5rem;
+  }
+  .map-frame {
+    aspect-ratio: 16 / 9;
   }
   .phones {
     gap: 1.3rem;

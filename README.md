@@ -13,7 +13,7 @@ Strona będzie dostępna pod adresem `http://localhost:4321`.
 
 ## Konfiguracja treści
 
-Główną stronę edytuj w `src/pages/index.astro`. Przed publikacją uzupełnij tam dane kontaktowe oraz, jeśli są już ustalone, imiona nauczycieli. Numery telefonu są obecnie placeholderami tekstowymi; po otrzymaniu właściwych numerów dodaj do nich również linki `tel:`. W tym samym pliku możesz zmienić adres zajęć (domyślnie: Szczecin, ul. Korepetycyjna 5) i czas lekcji (domyślnie: 60 minut).
+Główną stronę edytuj w `src/pages/index.astro`. Przed publikacją uzupełnij tam dane kontaktowe oraz, jeśli są już ustalone, imiona nauczycieli. Numery telefonu są obecnie placeholderami tekstowymi; po otrzymaniu właściwych numerów dodaj do nich również linki `tel:`. W tym samym pliku możesz zmienić adres zajęć (domyślnie: Szczecin, UL. SMOLAŃSKA 4) i czas lekcji (domyślnie: 60 minut).
 
 Tytuł i opis SEO znajdują się w `src/consts.ts`. Domyślny obraz Open Graph to `public/matpol-logo.jpg`; zastąp go własnym plikiem, jeśli logo będzie miało inną nazwę.
 
