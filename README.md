@@ -1,33 +1,33 @@
 # Matpol
 
-Prosta, jednostronicowa strona firmy Matpol oferującej stacjonarne korepetycje z języka polskiego i matematyki w Szczecinie.
+A simple one-page website for Matpol, offering in-person Polish and mathematics tutoring in Szczecin.
 
-## Uruchomienie lokalne
+## Local development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Strona będzie dostępna pod adresem `http://localhost:4321`.
+The site will be available at `http://localhost:4321`.
 
-## Konfiguracja treści
+## Content configuration
 
-Główną stronę edytuj w `src/pages/index.astro`. Przed publikacją uzupełnij tam dane kontaktowe oraz, jeśli są już ustalone, imiona nauczycieli. Numery telefonu są obecnie placeholderami tekstowymi; po otrzymaniu właściwych numerów dodaj do nich również linki `tel:`. W tym samym pliku możesz zmienić adres zajęć (domyślnie: Szczecin, UL. SMOLAŃSKA 4) i czas lekcji (domyślnie: 60 minut).
+Edit the main page in `src/pages/index.astro`. Before publishing, add the contact details and, if available, the tutors’ names. Phone numbers are currently text placeholders; when the real numbers are available, add `tel:` links as well. You can also change the lesson address (currently Szczecin, UL. SMOLAŃSKA 4) and lesson length (currently 60 minutes) in the same file.
 
-Tytuł i opis SEO znajdują się w `src/consts.ts`. Domyślny obraz Open Graph to `public/matpol-logo.jpg`; zastąp go własnym plikiem, jeśli logo będzie miało inną nazwę.
+The SEO title and description are defined in `src/consts.ts`. The default Open Graph image is `public/matpol-logo.jpg`; replace it if the logo uses a different filename.
 
-## Budowanie i wdrażanie
+## Build and deployment
 
 ```bash
 npm run build
 npm run deploy
 ```
 
-Adres kanoniczny i absolutne adresy Open Graph są generowane tylko wtedy, gdy podczas budowania ustawiona jest zmienna `SITE_URL`, na przykład:
+The canonical URL and absolute Open Graph URLs are generated only when `SITE_URL` is set during the build, for example:
 
 ```bash
 SITE_URL=https://matpol.example npm run build
 ```
 
-Projekt korzysta z adaptera Cloudflare i może być wdrażany jako statyczna strona na Cloudflare Workers.
+The project uses the Cloudflare adapter and can be deployed as a static site on Cloudflare Workers.
