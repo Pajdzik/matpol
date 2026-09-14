@@ -1,0 +1,240 @@
+<div
+  class="hero-art"
+  role="img"
+  aria-label="Ilustracja dwóch osobnych kartek: matematyka i język polski"
+>
+  <div class="sheet math-sheet" aria-hidden="true">
+    <div class="tape tape-math"></div>
+    <div class="sheet-content">
+      <p class="sheet-label">Matematyka</p>
+      <p class="equation">f(x) = x² + 2x</p>
+      <svg class="math-mark" viewBox="0 0 92 54" aria-hidden="true">
+        <path d="M8 42 28 26l12 10 20-25 24 19" />
+        <path d="M70 16h14v14" />
+      </svg>
+    </div>
+  </div>
+
+  <div class="sheet polish-sheet" aria-hidden="true">
+    <div class="tape tape-polish"></div>
+    <div class="sheet-content">
+      <p class="sheet-label">Język polski</p>
+      <p class="quote">„słowa mają moc”</p>
+      <div class="quote-mark">✳</div>
+    </div>
+  </div>
+
+  <div class="art-caption" aria-hidden="true">
+    <span>MATPOL</span>
+    <span>osobne zajęcia</span>
+  </div>
+</div>
+
+<style>
+  .hero-art {
+    --navy: #12223a;
+    --orange: #da7348;
+    --paper: #fcfaf6;
+    --line: #d9d0c4;
+    --muted: #6e706e;
+    --serif: Georgia, "Times New Roman", serif;
+    width: 100%;
+    max-width: 530px;
+    min-width: 0;
+    height: 470px;
+    position: relative;
+    overflow: hidden;
+    background: #e8dfd2;
+    transform: rotate(2deg);
+  }
+
+  .hero-art::before {
+    content: "";
+    position: absolute;
+    inset: 19px;
+    border: 1px solid #cfc4b5;
+    pointer-events: none;
+  }
+
+  .sheet {
+    position: absolute;
+    width: min(79%, 370px);
+    height: 40%;
+    padding: 1.55rem 1.8rem;
+    background: var(--paper);
+    box-shadow: 10px 12px 0 #cec2b3;
+    overflow: hidden;
+  }
+
+  .sheet::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.62;
+  }
+
+  .math-sheet {
+    top: 6%;
+    left: 5%;
+    transform: rotate(-5deg);
+    z-index: 1;
+  }
+
+  .math-sheet::before {
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0 32px,
+      #dce0df 33px 34px
+    );
+  }
+
+  .polish-sheet {
+    right: 5%;
+    bottom: 12%;
+    transform: rotate(4deg);
+    z-index: 2;
+  }
+
+  .polish-sheet::before {
+    background-image:
+      linear-gradient(#e5ddd2 1px, transparent 1px),
+      linear-gradient(90deg, #e5ddd2 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.35;
+  }
+
+  .sheet-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .sheet-label {
+    margin: 0 0 1rem;
+    color: var(--muted);
+    font-family: Atkinson, Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .equation,
+  .quote {
+    margin: 0;
+    font-family: var(--serif);
+    line-height: 1.12;
+  }
+
+  .equation {
+    color: var(--navy);
+    font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+    white-space: nowrap;
+  }
+
+  .quote {
+    color: var(--orange);
+    font-size: clamp(1.45rem, 3vw, 2.15rem);
+    max-width: 13ch;
+  }
+
+  .tape {
+    position: absolute;
+    z-index: 2;
+    width: 92px;
+    height: 27px;
+    background: #d7a887b8;
+  }
+
+  .tape-math {
+    top: 17px;
+    right: 30px;
+    transform: rotate(6deg);
+  }
+
+  .tape-polish {
+    top: 18px;
+    right: 27px;
+    transform: rotate(-7deg);
+  }
+
+  .math-mark {
+    position: absolute;
+    width: 92px;
+    right: 0;
+    bottom: 15px;
+    fill: none;
+    stroke: var(--navy);
+    stroke-width: 2;
+  }
+
+  .quote-mark {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    color: var(--orange);
+    font-family: Atkinson, Arial, sans-serif;
+    font-size: 1.35rem;
+  }
+
+  .art-caption {
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    bottom: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    color: #6e706e;
+    font-family: Atkinson, Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 800px) {
+    .hero-art {
+      width: 100%;
+      height: 420px;
+      margin-top: 4rem;
+    }
+
+    .sheet {
+      width: 80%;
+      height: 40%;
+      padding: 1.35rem 1.35rem;
+    }
+
+    .sheet-label {
+      margin-bottom: 1rem;
+    }
+
+    .equation {
+      font-size: 1.25rem;
+    }
+
+    .quote {
+      font-size: 1.55rem;
+      max-width: 13ch;
+    }
+
+    .art-caption {
+      left: 1.4rem;
+      right: 1.4rem;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .sheet {
+      width: 80%;
+    }
+
+    .equation {
+      font-size: 1.15rem;
+    }
+
+    .quote {
+      font-size: 1.4rem;
+    }
+  }
+</style>
