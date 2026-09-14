@@ -54,10 +54,10 @@ a:focus-visible {
   top: 1rem;
 }
 .site-header {
-  height: 108px;
+  height: 168px;
   max-width: 1280px;
   margin: auto;
-  padding: 22px 5vw;
+  padding: 18px 5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,8 +73,6 @@ a:focus-visible {
   height: 100%;
   object-fit: cover;
   object-position: center 48%;
-  mix-blend-mode: multiply;
-  transform: scale(1.25);
 }
 .site-header nav {
   display: flex;
@@ -477,8 +475,8 @@ em {
 
 @media (min-width: 801px) {
   .brand {
-    width: 220px;
-    height: 64px;
+    width: 420px;
+    height: 132px;
   }
 }
 .eyebrow {
@@ -489,12 +487,13 @@ em {
 }
 @media (max-width: 800px) {
   .site-header {
-    height: 90px;
+    height: 102px;
+    padding: 18px 6vw;
   }
 
   .brand {
-    width: 150px;
-    height: 54px;
+    width: clamp(136px, 38vw, 175px);
+    height: 64px;
   }
 }
 

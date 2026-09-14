@@ -15,7 +15,7 @@ The site will be available at `http://localhost:4321`.
 
 Edit the main page in `src/pages/index.astro`. Before publishing, add the contact details and, if available, the tutors’ names. Phone numbers are currently text placeholders; when the real numbers are available, add `tel:` links as well. You can also change the lesson address (currently Szczecin, UL. SMOLAŃSKA 4) and lesson length (currently 60 minutes) in the same file.
 
-The SEO title and description are defined in `src/consts.ts`. The default Open Graph image is `public/matpol-logo.jpg`; replace it if the logo uses a different filename.
+The SEO title and description are defined in `src/consts.ts`. The header logo is `public/matpol-logo-montserrat-web.svg`, with a transparent background, editable text, and an embedded Montserrat SemiBold font. The default Open Graph image is its PNG counterpart, `public/matpol-logo-montserrat.png`; update both assets when changing the logo.
 
 ## Build and deployment
 
