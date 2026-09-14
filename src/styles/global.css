@@ -324,10 +324,18 @@ em {
   margin-top: 2rem;
 }
 .social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   color: #f1a27c;
   border-bottom: 1px solid #f1a27c;
   padding-bottom: 0.25rem;
   font-size: 14px;
+}
+.social-links svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
 }
 .contact-link {
   display: inline-block;
