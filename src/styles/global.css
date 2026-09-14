@@ -269,9 +269,20 @@ em {
 .contact-details {
   padding-top: 2rem;
 }
-.contact-details > p {
+.location-block {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.72fr) minmax(240px, 1.28fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+.location-copy p {
   font-size: 18px;
   color: #d7d9d9;
+  margin: 0;
+}
+.location-copy strong {
+  color: var(--paper);
+  font-weight: 700;
 }
 .preferred-contact {
   border-top: 1px solid #526076;
@@ -339,14 +350,14 @@ em {
 }
 .contact-link {
   display: inline-block;
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
   color: #f1a27c;
   border-bottom: 1px solid #f1a27c;
   padding-bottom: 0.25rem;
   font-size: 14px;
 }
 .map-frame {
-  margin-top: 1.75rem;
+  margin-top: 0;
   width: 100%;
   aspect-ratio: 16 / 7;
   min-height: 150px;
@@ -431,6 +442,12 @@ em {
   }
   .contact-details {
     padding-top: 3.5rem;
+  }
+  .location-block {
+    display: block;
+  }
+  .location-copy {
+    margin-bottom: 1.75rem;
   }
   .map-frame {
     aspect-ratio: 16 / 9;
