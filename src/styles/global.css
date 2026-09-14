@@ -158,100 +158,6 @@ em {
   background: var(--orange);
   transform: translateY(-2px);
 }
-.hero-art {
-  height: 470px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #e8dfd2;
-  transform: rotate(2deg);
-}
-.hero-art:before {
-  content: "";
-  position: absolute;
-  inset: 19px;
-  border: 1px solid #cfc4b5;
-}
-.tape {
-  position: absolute;
-  width: 112px;
-  height: 33px;
-  background: #d7a887b8;
-  top: 28px;
-  right: 88px;
-  transform: rotate(6deg);
-  z-index: 2;
-}
-.notebook {
-  background: var(--paper);
-  width: min(72%, 360px);
-  height: 350px;
-  position: relative;
-  padding: 3.2rem 2rem;
-  box-shadow: 12px 15px 0 #cec2b3;
-  transform: rotate(-5deg);
-  overflow: hidden;
-}
-.notebook-lines {
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(#0000 0 35px, #dce0df 36px 37px);
-  opacity: 0.6;
-}
-.math-note,
-.polish-note {
-  position: relative;
-  font-family: var(--serif);
-  font-size: 21px;
-  line-height: 1.45;
-}
-.math-note span,
-.polish-note span {
-  color: var(--orange);
-}
-.math-note small,
-.polish-note small {
-  font-family: Atkinson;
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.polish-note {
-  margin-top: 2.7rem;
-  margin-left: 4rem;
-}
-.orange-dot {
-  width: 19px;
-  height: 19px;
-  border-radius: 50%;
-  background: var(--orange);
-  position: absolute;
-  right: 35px;
-  top: 70px;
-}
-.scribble {
-  position: absolute;
-  width: 130px;
-  right: 23px;
-  bottom: 37px;
-  fill: none;
-  stroke: var(--navy);
-  stroke-width: 2;
-}
-.art-caption {
-  position: absolute;
-  left: 2rem;
-  bottom: 1.4rem;
-  right: 2rem;
-  display: flex;
-  justify-content: space-between;
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #6e706e;
-}
 .intro-band {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -305,10 +211,6 @@ em {
 .math-card {
   background: var(--navy);
   color: var(--paper);
-}
-.card-number {
-  font-size: 12px;
-  letter-spacing: 0.12em;
 }
 .subject-mark {
   position: absolute;
@@ -428,13 +330,6 @@ em {
     padding: 4.5rem 6vw 5rem;
     display: block;
   }
-  .hero-art {
-    height: 390px;
-    margin-top: 4rem;
-  }
-  .hero-art .notebook {
-    height: 300px;
-  }
   .intro-band {
     margin: 0 6vw;
     padding: 1.2rem 0;
@@ -518,18 +413,6 @@ em {
   .brand {
     width: 128px;
     height: 48px;
-  }
-  .hero-art {
-    height: 420px;
-  }
-  .hero-art .notebook {
-    height: 350px;
-  }
-  .notebook {
-    width: 88%;
-  }
-  .polish-note {
-    margin-left: 2rem;
   }
 }
 

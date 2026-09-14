@@ -1,5 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import HeroNotes from "../components/HeroNotes.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
@@ -34,44 +35,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             <em>Więcej pewności.</em>
           </h1>
           <p class="hero-lead">
-            Spokojna, uważna nauka języka polskiego i matematyki. Spotykamy się
-            na miejscu, w tempie dopasowanym do Ciebie.
+            Wybierz korepetycje z języka polskiego lub matematyki. Każdy
+            przedmiot to osobne zajęcia z nauczycielem, w tempie dopasowanym do
+            Ciebie.
           </p>
           <a class="button" href="#kontakt">
             Porozmawiajmy <span aria-hidden="true">↗</span>
           </a>
         </div>
-        <div
-          class="hero-art"
-          aria-label="Ilustracja zeszytu z notatkami z matematyki i języka polskiego"
-          role="img"
-        >
-          <div class="tape" aria-hidden="true"></div>
-          <div class="notebook">
-            <div class="notebook-lines" aria-hidden="true"></div>
-            <div class="math-note">
-              <span>f(x)</span> = x² + 2x
-              <br />
-              <small>∑ · √ · π</small>
-            </div>
-            <div class="polish-note">
-              <span>„słowa</span>
-              <br />
-              mają moc”
-              <br />
-              <small>język polski</small>
-            </div>
-            <div class="orange-dot" aria-hidden="true"></div>
-            <svg class="scribble" viewBox="0 0 150 90" aria-hidden="true">
-              <path d="M8 65c28-32 45-32 63-12s30 22 70-35" />
-              <path d="M118 11l23 7-12 19" />
-            </svg>
-          </div>
-          <div class="art-caption">
-            <span>MATPOL</span>
-            <span>uczymy się razem</span>
-          </div>
-        </div>
+        <HeroNotes />
       </section>
       <section class="intro-band" aria-label="Najważniejsze informacje">
         <p>
@@ -97,7 +69,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         </div>
         <div class="offer-grid">
           <article class="offer-card polish-card">
-            <span class="card-number">01</span>
             <span class="subject-mark" aria-hidden="true">
               Aa
             </span>
@@ -108,7 +79,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             </p>
           </article>
           <article class="offer-card math-card">
-            <span class="card-number">02</span>
             <span class="subject-mark" aria-hidden="true">
               ∑
             </span>
@@ -127,15 +97,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         <div>
           <p class="eyebrow">Dwie perspektywy</p>
           <h2 id="about-title">
-            Poznajmy się
+            Ucz się
             <br />
-            <em>przy jednym stole.</em>
+            <em>po swojemu.</em>
           </h2>
         </div>
         <div class="about-text">
           <p>
-            Zajęcia prowadzi dwoje nauczycieli — jedna osoba uczy języka
-            polskiego, druga matematyki.
+            Matpol tworzy dwoje nauczycieli — jedna osoba prowadzi język
+            polski, druga matematykę. Zajęcia z obu przedmiotów odbywają się
+            niezależnie.
           </p>
           <p class="muted">
             Każde spotkanie to czas na pytania, próby i własne tempo.
@@ -144,7 +115,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
       </section>
       <section class="contact" id="kontakt" aria-labelledby="contact-title">
         <div>
-          <p class="eyebrow light">Zacznijmy rozmowę</p>
+          <p class="eyebrow light">Kontakt</p>
           <h2 id="contact-title">
             Masz pytanie?
             <br />
