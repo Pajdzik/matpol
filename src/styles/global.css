@@ -272,6 +272,27 @@ em {
   font-size: 18px;
   color: #d7d9d9;
 }
+.preferred-contact {
+  border-top: 1px solid #526076;
+  margin-top: 2rem;
+  padding-top: 1.3rem;
+}
+.preferred-contact span {
+  display: block;
+  color: #adb5bd;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-size: 10px;
+}
+.preferred-contact a {
+  display: inline-block;
+  margin-top: 0.35rem;
+  color: #f1a27c;
+  border-bottom: 1px solid #f1a27c;
+  padding-bottom: 0.25rem;
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
 .phones {
   border-top: 1px solid #526076;
   margin-top: 2rem;
