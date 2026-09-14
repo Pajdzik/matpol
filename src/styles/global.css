@@ -257,8 +257,8 @@ em {
   margin: 0 auto;
   padding: 7rem 10%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 7rem;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: 5rem;
 }
 .light {
   color: #ef9a70;
@@ -271,7 +271,7 @@ em {
 }
 .location-block {
   display: grid;
-  grid-template-columns: minmax(150px, 0.72fr) minmax(240px, 1.28fr);
+  grid-template-columns: minmax(200px, 0.8fr) minmax(280px, 1.2fr);
   gap: 1.5rem;
   align-items: start;
 }
@@ -349,7 +349,8 @@ em {
   fill: currentColor;
 }
 .contact-link {
-  display: inline-block;
+  display: inline-flex;
+  white-space: nowrap;
   margin-top: 1.5rem;
   color: #f1a27c;
   border-bottom: 1px solid #f1a27c;
@@ -359,8 +360,8 @@ em {
 .map-frame {
   margin-top: 0;
   width: 100%;
-  aspect-ratio: 16 / 7;
-  min-height: 150px;
+  aspect-ratio: 16 / 8;
+  min-height: 175px;
   border: 1px solid #526076;
   background: #1b2b43;
   overflow: hidden;
